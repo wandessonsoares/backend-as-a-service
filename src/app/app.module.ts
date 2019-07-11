@@ -2,13 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { FormsModule }  from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EditComponent } from './contatos/edit/edit.component';
 import { ListComponent } from './contatos/list/list.component';
-import { ContatoComponent } from './contatos/shared/contato/contato.component';
-import { ContatoDataComponent } from './contatos/shared/contato-data/contato-data.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyC2QkSYQJArpv5RNMi-eV1YMdwKxujXQpA",
@@ -24,15 +23,14 @@ var firebaseConfig = {
   declarations: [
     AppComponent,
     EditComponent,
-    ListComponent,
-    ContatoComponent,
-    ContatoDataComponent
+    ListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
