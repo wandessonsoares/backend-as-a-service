@@ -1,4 +1,15 @@
-<div class="container mt-5 mb-5">
-  <app-edit></app-edit>
-  <app-list></app-list>
+<nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a routerLink="/" class="nav-link" routerLinkActive="active">
+          AppContatos
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
